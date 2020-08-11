@@ -1,27 +1,21 @@
-# ObjectpressAngularKit
+# Object Press - Angular Starter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
+Object Press API Usage Example
 
-## Development server
+## Content Endpoints
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### https://api.objectpress.co/content/get-all
 
-## Code scaffolding
+All "posts" for an App can be retrieved via JSON post request.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- app: Requires App ID (string).
+- client: Requires Client ID (string).
+- limit: Number of posts to request. Default is all posts, not required (integer).
+- sort: Sort posts alphabetically. Default is sort by publishDate and not required (boolean).
 
-## Build
+### https://api.objectpress.co/content/search
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Individual "posts" for an App can also be retrieved via JSON post request.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- app: Requires App ID (string).
+- post: Requires Post ID (string).

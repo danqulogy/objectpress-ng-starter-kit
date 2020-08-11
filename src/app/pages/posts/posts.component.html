@@ -1,0 +1,51 @@
+<div class="bg-primary content">
+<!--  Page Content-->
+  <div class="container">
+    <div class="row">
+<!--      Post Content Column-->
+
+      <div class="text-light col-lg-8" *ngIf="(article$|async) as article">
+<!--        Title-->
+              <div>
+                <h1 class="mt-4">{{article.post.title}}</h1>
+
+<!--        Author-->
+        <p class="lead">by {{article.post.author}}</p>
+
+                <hr />
+
+<!--        Date/Time-->
+        <p>
+          Posted on 14th July, 2020
+        </p>
+
+        <hr />
+
+<!--        Preview Image-->
+        <img
+          class="img-fluid rounded"
+          [src]="article.post.images[0]"
+        [alt]="article.post.title"
+        />
+
+        <hr />
+
+<!--        Post Content-->
+        <p>{{article.post.details}}</p>
+
+                <hr />
+
+<!--         Pagination-->
+        <app-pagination [currentPostID]="article.postID"></app-pagination>
+              </div>
+
+      </div>
+      <div class="col-lg-4">
+        <!--      Widgets-->
+        <app-widgets></app-widgets>
+      </div>
+    </div>
+<!--    .row-->
+  </div>
+<!--  .container-->
+</div>

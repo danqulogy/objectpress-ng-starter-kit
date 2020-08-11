@@ -1,0 +1,18 @@
+<div class="card mb-4">
+  <img
+    class="card-img-top"
+    [src]="content.post.images[0]"
+    alt={content.title}
+  />
+  <div class="card-body">
+    <h2 class="card-title">{{content.post.title}}</h2>
+    <p class="card-text">{{content.post.summary}}</p>
+    <a [routerLink]="'post/'+content.postID" class="btn btn-primary">
+    Read More &rarr;
+    </a>
+  </div>
+  <div class="card-footer text-muted">
+    Posted on {{content.post.publishDate}}
+    by <a routerLink="/">{{content.post.author}}</a>
+  </div>
+</div>

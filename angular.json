@@ -145,6 +145,7 @@
   },
   "defaultProject": "objectpress-angular-kit",
   "cli": {
-    "analytics": "96f41915-561c-4480-9c3c-4463669bdc49"
+    "analytics": "96f41915-561c-4480-9c3c-4463669bdc49",
+    "defaultCollection": "@datorama/akita"
   }
 }

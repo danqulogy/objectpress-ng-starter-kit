@@ -1,0 +1,16 @@
+<ul class="pagination justify-content-center mb-4">
+  <li class="page-item" *ngIf="(postIds[postIds.indexOf(currentPostID) - 1])">
+    <a  [routerLink]="'/post/'+postIds[postIds.indexOf(currentPostID) - 1]"
+      class="page-link">
+      &larr; Older
+    </a>
+  </li>
+  <li class="page-item" *ngIf="(postIds[postIds.indexOf(currentPostID) +1])">
+    <a
+      class="page-link"
+      [routerLink]="'/post/'+postIds[postIds.indexOf(currentPostID) +1]"
+    >
+      Newer &rarr;
+    </a>
+  </li>
+</ul>
